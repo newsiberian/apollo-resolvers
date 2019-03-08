@@ -1,4 +1,8 @@
 
+1.4.2 / 2019-03-07
+
+  * Fix: Return an error that throws by wrapped component
+
 1.4.1 / 2018-07-22
 ==================
 

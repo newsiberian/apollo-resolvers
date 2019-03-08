@@ -172,6 +172,24 @@ describe('(unit) src/helper.js', () => {
           expect(r1.handle.calledOnce).to.be.true;
         });
       });
+
+      it('(true, false) should return local error from wrapped resolver', () => {
+        const resolver = or(successResolver, failureResolver);
+        const localError = new Error('test');
+        const finalResolver = resolver(() => {
+          console.log('final resolver');
+          throw localError;
+        });
+        return finalResolver()
+          .catch(err => {
+            expect(err).to.equal(localError);
+          });
+      });
+
+      it('(false, false, true) succeeds', () => {
+        const resolver = or(failureResolver, failureResolver, successResolver)(final);
+        return resolver().then(res => expect(res).to.be.true);
+      });
     });
 
   });
