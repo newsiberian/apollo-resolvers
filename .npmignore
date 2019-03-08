@@ -4,6 +4,8 @@ test
 .editorconfig
 .eslintrc
 .gitignore
+.idea
 circle.yml
 Makefile
+tsconfig.json
 yarn.lock

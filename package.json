@@ -1,6 +1,6 @@
 {
   "name": "@mercuriya/apollo-resolvers",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Expressive and composable resolvers for Apollostack's GraphQL server Edit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
